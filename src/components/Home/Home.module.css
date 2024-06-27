@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 4px solid var(--primary-color);
+  padding: 16px;
+  border-radius: 8px;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.button {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 32px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  transition: scale 0.2s;
+  cursor: pointer;
+
+  &:active {
+    scale: 0.98;
+  }
+}
