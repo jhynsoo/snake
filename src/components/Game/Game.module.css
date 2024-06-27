@@ -1,0 +1,38 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+  border: 4px solid var(--primary-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+
+  &.active {
+    background-color: var(--primary-color);
+    border: 1px solid var(--background-color);
+    border-radius: 4px;
+  }
+
+  &.food:not(.active)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+  }
+}
